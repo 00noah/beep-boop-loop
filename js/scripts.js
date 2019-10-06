@@ -3,8 +3,6 @@
 var numberArray = []
 var ammendedArray = []
 
-
-
 // USER LOGIC
 $(document).ready(function() {
   $("#userForm").submit(function (event) {
@@ -25,15 +23,12 @@ $(document).ready(function() {
 
     // IF NEGATIVE
     if (userNumber < 0) {
-      alert("That's a negative number, silly." + " Please try again!")
-      return;
+      alert("That's a negative number, silly." + " Please try again!");
     }
-
 
     // LOOP UP TO USER'S NUMBER TO PUSH TO ARRAY AND APPPEND.
     for (let n = 0; n <= userNumber; n += 1) {
       numberArray.push(n.toString());
-      // $('ul#listOutput').append('<li>' + numberArray[n] + '</li>');
     };
 
     numberArray.forEach(function(amendment) {
@@ -52,42 +47,14 @@ $(document).ready(function() {
       }
     });
 
+    // CONSOLE TESTING
+    // console.log(numberArray)
+		// $(".numberArray").text(numberArray);
+    // console.log(ammendedArray)
+		// $(".numberArray").text(ammendedArray);
 
-
-
-
-  //   for (let n = 0; n <= userNumber; n += 1) {
-  //     if (numberArray.includes("1")) {
-  //       ammendedArray.push("beep!");
-  //     }
-  //     else if (numberArray.includes("2")) {
-  //       ammendedArray.push(n.toString());
-  //     }
-  //     else {
-  //       ammendedArray.push(n.toString());
-  //     };
-  // };
-
-
-
-
-
-    // TESTING AMMENDED ARRAY CONDITIONS
-    // var ammendedArray = numberArray.map();
-
-    // for (let n = 0; n <= numberArray.length; n += 1) {
-    //   if n ===
-    // };
-
-
-
-    // TESTING START
-    console.log(numberArray)
-		$(".numberArray").text(numberArray);
-    console.log(ammendedArray)
-		$(".numberArray").text(ammendedArray);
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
     numberArray = []
-
+    ammendedArray = []
   });
 });
