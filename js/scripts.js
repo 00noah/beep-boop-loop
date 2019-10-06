@@ -25,16 +25,25 @@ $(document).ready(function() {
     // LOOP UP TO USER'S NUMBER TO PUSH TO ARRAY AND APPPEND.
     for (let n = 0; n <= userNumber; n += 1) {
       numberArray.push(n.toString());
-      $('ul#listOutput').append('<li>' + numberArray[n] + '</li>');
+      // $('ul#listOutput').append('<li>' + numberArray[n] + '</li>');
     };
 
-
-
     numberArray.forEach(function(amendment) {
-      if (amendment.includes("1") === true) {
-        ammendedArray.push("beep!");
+      if (amendment.includes("3") === true) {
+        ammendedArray.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
+      } else if (amendment.includes("2") === true) {
+          ammendedArray.push("Boop!");
+          $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
+      } else if (amendment.includes("1") === true) {
+          ammendedArray.push("Beep!");
+          $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
+      } else if (amendment.includes("-") === true) {
+          ammendedArray.push("neg!");
+          $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
       } else {
         ammendedArray.push(amendment);
+        $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
       }
     });
 
