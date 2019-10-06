@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     // SHOW SCRIPT OUTPUT
-    $('.scriptOutput').show();
+    $('.scriptOutput').show('easing');
 
     // ACCEPT USER FIELDS
     var userNumber = parseInt($("#userInput").val());

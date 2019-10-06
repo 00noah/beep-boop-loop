@@ -20,12 +20,12 @@ h1 {
 
 .beep {
   background-image: linear-gradient(to left, rgba(102,204,255,0.25), rgba(255,204,153,0.1));
-  text-shadow: 50px 1px #0077b3;
+  text-shadow: 102px 1px #0077b3;
 }
 
 .boop {
   background-image: linear-gradient(to left, rgba(153,255,153,0.25), rgba(255,153,255,0.1));
-  text-shadow: 100px 1px #00cc00;
+  text-shadow: 204px 1px #00cc00;
 }
 
 .dave {
