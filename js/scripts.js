@@ -3,9 +3,7 @@
 numberArray = []
 
 
-for (let n = 0; n < userNumber; n + 1) {
-  ;
-};
+
 
 // user logic
 $(document).ready(function() {
@@ -15,8 +13,15 @@ $(document).ready(function() {
 
     var userNumber = parseInt($("#userInput").val());
     $(".userInput").text(userNumber);
+    // TESTING START
+    console.log(numberArray)
+		$(".numberArray").text(numberArray);
+    // TESTING END
 
-
+    for (let n = 0; n <= userNumber; n += 1) {
+      numberArray.push(n);
+      $('ul#listOutput').append('<li>' + numberArray[n] + '</li>');
+    };
 
 
     // for (var index = number1Input; index <= number2Input; index += number1Input) {
