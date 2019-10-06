@@ -28,17 +28,31 @@ $(document).ready(function() {
       $('ul#listOutput').append('<li>' + numberArray[n] + '</li>');
     };
 
-    for (let n = 0; n <= userNumber; n += 1) {
-      if (numberArray.includes("1")) {
-        ammendedArray.push(n.toString());
+
+
+    numberArray.forEach(function(amendment) {
+      if (amendment.includes("1") === true) {
+        ammendedArray.push("beep!");
+      } else {
+        ammendedArray.push(amendment);
       }
-      else if (numberArray.includes("2")) {
-        ammendedArray.push(n.toString());
-      }
-      else {
-        ammendedArray.push(n.toString());
-      };
-  };
+    });
+
+
+
+
+
+  //   for (let n = 0; n <= userNumber; n += 1) {
+  //     if (numberArray.includes("1")) {
+  //       ammendedArray.push("beep!");
+  //     }
+  //     else if (numberArray.includes("2")) {
+  //       ammendedArray.push(n.toString());
+  //     }
+  //     else {
+  //       ammendedArray.push(n.toString());
+  //     };
+  // };
 
 
 
