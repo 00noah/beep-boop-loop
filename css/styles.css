@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(113deg, rgba(204,204,255,0.75), rgba(255,0,0,0.75));
+    background-image: linear-gradient(113deg, rgba(204,255,255,0.5), rgba(128,128,128,0.5));
 }
 
 h1 {
@@ -16,4 +16,20 @@ h1 {
 
 .scriptOutput {
   display: none;
+}
+
+.beep {
+  background-image: linear-gradient(to left, rgba(102,204,255,0.25), rgba(255,204,153,0.1));
+  text-shadow: 50px 1px #0077b3;
+}
+
+.boop {
+  background-image: linear-gradient(to left, rgba(153,255,153,0.25), rgba(255,153,255,0.1));
+  text-shadow: 100px 1px #00cc00;
+}
+
+.dave {
+  background-image: linear-gradient(to right, rgba(0,51,102,0.01), rgba(153,51,51,0.25));
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }

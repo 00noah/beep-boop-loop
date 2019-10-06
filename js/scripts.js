@@ -34,13 +34,13 @@ $(document).ready(function() {
     numberArray.forEach(function(amendment) {
       if (amendment.includes("3") === true) {
         ammendedArray.push("I'm sorry, Dave. I'm afraid I can't do that.");
-        $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
+        $('ul#listOutput').append('<li class="dave">' + ammendedArray[amendment] + '</li>');
       } else if (amendment.includes("2") === true) {
           ammendedArray.push("Boop!");
-          $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
+          $('ul#listOutput').append('<li class="boop">' + ammendedArray[amendment] + '</li>');
       } else if (amendment.includes("1") === true) {
           ammendedArray.push("Beep!");
-          $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
+          $('ul#listOutput').append('<li class="beep">' + ammendedArray[amendment] + '</li>');
       } else {
         ammendedArray.push(amendment);
         $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
