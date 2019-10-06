@@ -12,16 +12,20 @@
     <div class="container">
       <h1>Beep Boop Loop</h1>
       <HR>
-      <form id="userInput">
+      <form id="userForm">
         <div class="form-group">
-          <label for="userNumber">Enter a positive number:</label>
-          <input id="userNumber" type="text">
-        </div>
-        <button type="submit" class="btn btn-primary">Activate!</button>
+          <label for="userInput">Enter a positive number:</label>
+          <input id="userInput" type="text" placeholder="#" REQUIRED>
+      </div>
+      <button type="submit" class="btn btn-sm btn-primary">Activate!</button>
+
+
       </form>
 
       <div class="scriptOutput">
         <HR>
+        <h5>Beep Boop Loop for the number <span class="userInput"></span>:</h5>
+
         <ul id="listOutput">
         </ul>
       </div>

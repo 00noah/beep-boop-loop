@@ -1,6 +1,15 @@
 h1 {
   text-align: center;
 }
+
+#userForm {
+  text-align: center;
+}
+
+#userInput {
+  width: 60px;
+}
+
 .scriptOutput {
   display: none;
 }
