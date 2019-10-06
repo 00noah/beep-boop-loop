@@ -45,6 +45,12 @@
     * **Spec:** The program returns for any number including a 3 AND a 1 AND/OR a 2 (in any order): the number 3 rule above takes priority for that number.
       * Input: "`132`"
       * Output: "`..., "I'm sorry, Dave. I'm afraid I can't do that.", ...`
+    * **Spec:** The program returns an error for negative numbers.
+      * Input: "`-5`"
+      * Output: "`"That's a negative number, silly. Please try again!"`
+    * **Spec:** The program returns an error for a blank input.
+      * Input: "` `"
+      * Output: "`"Please fill out this field."`
 
 ---
 

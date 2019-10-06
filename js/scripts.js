@@ -9,6 +9,7 @@ var ammendedArray = []
 $(document).ready(function() {
   $("#userForm").submit(function (event) {
     event.preventDefault();
+
     // SHOW SCRIPT OUTPUT
     $('.scriptOutput').show();
 
@@ -21,6 +22,13 @@ $(document).ready(function() {
     while (list.hasChildNodes()) {
       list.removeChild(list.firstChild);
     };
+
+    // IF NEGATIVE
+    if (userNumber < 0) {
+      alert("That's a negative number, silly." + " Please try again!")
+      return;
+    }
+
 
     // LOOP UP TO USER'S NUMBER TO PUSH TO ARRAY AND APPPEND.
     for (let n = 0; n <= userNumber; n += 1) {
@@ -37,9 +45,6 @@ $(document).ready(function() {
           $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
       } else if (amendment.includes("1") === true) {
           ammendedArray.push("Beep!");
-          $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
-      } else if (amendment.includes("-") === true) {
-          ammendedArray.push("neg!");
           $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
       } else {
         ammendedArray.push(amendment);
