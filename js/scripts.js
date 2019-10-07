@@ -49,19 +49,29 @@ $(document).ready(function() {
       }
     });
 
+    var remixArray = ammendedArray.map(function(cells) {
+        return cells
+    });
+
+    console.log(remixArray)
+
+
     // DEBUG TESTING
     console.log(numberArray)
     console.log(ammendedArray)
 
+    // REMIX FUNCTION
 
-    $("#userForm").click(function(event) {
-      event.preventDefault();
+
+    //
+    // $("#userForm").click(function(event) {
+    //   event.preventDefault();
+    // });
+
+    document.getElementById('remix').onclick = function() {
       alert("ReMix!")
-
-
-      // DEBUG TESTING
-      console.log(remixArray)
-    });
+    }
+    // DEBUG TESTING
 
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
     numberArray = []
