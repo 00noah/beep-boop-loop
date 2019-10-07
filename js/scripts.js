@@ -48,39 +48,12 @@ $(document).ready(function() {
       }
     });
 
-    // REMIX FUNCTION
-    var remixArray = ammendedArray.map(function(x) {
-      return x
-    });
-    remixArray.reverse()
-
-    // REMIX BUTTON CLICK
-    $("#remix").click(function() {
-
-      // alert("ReMix!")
-
-      while (list.hasChildNodes()) {
-        list.removeChild(list.firstChild);
-      };
-
-      remixArray.forEach(function(cell) {
-        $('ul#listOutput').append('<li>' + remixArray[cell] + '</li>');
-      });
-
-
-
-
-    });
-
     // DEBUG TESTING
-    console.log(numberArray);
-    console.log(ammendedArray);
-    console.log(remixArray);
-
+    // console.log(numberArray);
+    // console.log(ammendedArray);
 
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
     numberArray = [];
     ammendedArray = [];
-    // remixArray = [];
   });
 });
