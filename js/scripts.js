@@ -2,10 +2,12 @@
 
 var numberArray = []
 var ammendedArray = []
+var remixArray = []
+
 
 // USER LOGIC
 $(document).ready(function() {
-  $("#userForm").submit(function (event) {
+  $("#userForm").submit(function(event) {
     event.preventDefault();
 
     // SHOW SCRIPT OUTPUT
@@ -47,14 +49,23 @@ $(document).ready(function() {
       }
     });
 
-    // CONSOLE TESTING
-    // console.log(numberArray)
-		// $(".numberArray").text(numberArray);
-    // console.log(ammendedArray)
-		// $(".numberArray").text(ammendedArray);
+    // DEBUG TESTING
+    console.log(numberArray)
+    console.log(ammendedArray)
+
+
+    $("#userForm").click(function(event) {
+      event.preventDefault();
+      alert("ReMix!")
+
+
+      // DEBUG TESTING
+      console.log(remixArray)
+    });
 
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
     numberArray = []
     ammendedArray = []
+    remixArray = []
   });
 });
