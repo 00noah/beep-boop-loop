@@ -1,9 +1,8 @@
 // business logic
 
-var numberArray = []
-var ammendedArray = []
-var remixArray = []
-
+var numberArray = [];
+var ammendedArray = [];
+var remixArray = [];
 
 // USER LOGIC
 $(document).ready(function() {
@@ -49,33 +48,45 @@ $(document).ready(function() {
       }
     });
 
-    var remixArray = ammendedArray.map(function(cells) {
-        return cells
-    });
-
-    console.log(remixArray)
-
-
-    // DEBUG TESTING
-    console.log(numberArray)
-    console.log(ammendedArray)
-
     // REMIX FUNCTION
+    var remixArray = ammendedArray.map(function(x) {
+      return x
+    });
+    remixArray.reverse()
 
-
-    //
-    // $("#userForm").click(function(event) {
-    //   event.preventDefault();
-    // });
-
-    document.getElementById('remix').onclick = function() {
+    // REMIX BUTTON CLICK
+    document.getElementById('remix').onclick = function(event) {
+      event.preventDefault();
       alert("ReMix!")
-    }
-    // DEBUG TESTING
+      var list = document.getElementById("listOutput");
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      };
 
+      remixArray.forEach(function(amendment) {
+        $('ul#listOutput').append('<li>' + remixArray[amendment] + '</li>');
+      });
+
+
+
+
+    };
+    // DEBUG TESTING
+    console.log(numberArray);
+    console.log(ammendedArray);
+    console.log(remixArray);
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
-    numberArray = []
-    ammendedArray = []
-    remixArray = []
+    numberArray = [];
+    ammendedArray = [];
+    remixArray = [];
+
+
+
+
+
+
+
+
+
   });
 });
