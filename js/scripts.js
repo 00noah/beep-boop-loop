@@ -55,20 +55,20 @@ $(document).ready(function() {
     remixArray.reverse()
 
     // REMIX BUTTON CLICK
-
-
     $("#remix").click(function() {
 
-      alert("ReMix!")
+      // alert("ReMix!")
 
-      var list = document.getElementById("listOutput");
-      // while (list.hasChildNodes()) {
-      //   list.removeChild(list.firstChild);
-      // };
+      while (list.hasChildNodes()) {
+        list.removeChild(list.firstChild);
+      };
 
-      remixArray.forEach(function(test) {
-        $('ul#listOutput').append('<li>' + remixArray + '</li>');
+      remixArray.forEach(function(cell) {
+        $('ul#listOutput').append('<li>' + remixArray[cell] + '</li>');
       });
+
+
+
 
     });
 
@@ -81,6 +81,6 @@ $(document).ready(function() {
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
     numberArray = [];
     ammendedArray = [];
-    remixArray = [];
+    // remixArray = [];
   });
 });
