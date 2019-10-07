@@ -37,11 +37,11 @@ $(document).ready(function() {
         ammendedArray.push("I'm sorry, Dave. I'm afraid I can't do that.");
         $('ul#listOutput').append('<li class="dave">' + ammendedArray[amendment] + '</li>');
       } else if (amendment.includes("2") === true) {
-          ammendedArray.push("Boop!");
-          $('ul#listOutput').append('<li class="boop">' + ammendedArray[amendment] + '</li>');
+        ammendedArray.push("Boop!");
+        $('ul#listOutput').append('<li class="boop">' + ammendedArray[amendment] + '</li>');
       } else if (amendment.includes("1") === true) {
-          ammendedArray.push("Beep!");
-          $('ul#listOutput').append('<li class="beep">' + ammendedArray[amendment] + '</li>');
+        ammendedArray.push("Beep!");
+        $('ul#listOutput').append('<li class="beep">' + ammendedArray[amendment] + '</li>');
       } else {
         ammendedArray.push(amendment);
         $('ul#listOutput').append('<li>' + ammendedArray[amendment] + '</li>');
@@ -55,38 +55,32 @@ $(document).ready(function() {
     remixArray.reverse()
 
     // REMIX BUTTON CLICK
-    document.getElementById('remix').onclick = function(event) {
-      event.preventDefault();
-      alert("ReMix!")
-      var list = document.getElementById("listOutput");
-      while (list.hasChildNodes()) {
-        list.removeChild(list.firstChild);
-      };
 
-      remixArray.forEach(function(amendment) {
-        $('ul#listOutput').append('<li>' + remixArray[amendment] + '</li>');
+
+    $("#remix").click(function() {
+
+      alert("ReMix!")
+
+      var list = document.getElementById("listOutput");
+      // while (list.hasChildNodes()) {
+      //   list.removeChild(list.firstChild);
+      // };
+
+      remixArray.forEach(function(test) {
+        $('ul#listOutput').append('<li>' + remixArray + '</li>');
       });
 
+    });
 
-
-
-    };
     // DEBUG TESTING
     console.log(numberArray);
     console.log(ammendedArray);
     console.log(remixArray);
+
+
     // RESET ARRAY TO BLANK TO READY FOR FUTURE USES
     numberArray = [];
     ammendedArray = [];
     remixArray = [];
-
-
-
-
-
-
-
-
-
   });
 });
